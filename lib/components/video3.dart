@@ -53,13 +53,13 @@ class VideoPlayerPage1State extends State<VideoPlayerPage1> {
     }
 
     _controller = VideoPlayerController.network(url);
-    _controller.addListener(() {
-      if (!_controller.value.isInitialized) {
-        setState(() {
-          _loading = true;
-        });
-      }
-    });
+    // _controller.addListener(() {
+    //   if (!_controller.value.isInitialized) {
+    //     setState(() {
+    //       _loading = true;
+    //     });
+    //   }
+    // });
 
     await _controller.initialize();
     _chewieController = ChewieController(
